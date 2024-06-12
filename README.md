@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+## Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+When we first run `create-react-app` there are no folders inside the `src` folder and for most people the first 2 folders they create are a `components` and `hooks` folder. This is a really simple folder structure but for smaller projects with less than 10-15 components to approach.
 
-## Available Scripts
+### `pages`
 
-In the project directory, you can run:
+Each page of the application has its own folder containing a single root file (usually `index.js`) along with any `components`, `hooks`, or other files specific to that page. This localized structure makes it easier to manage and understand page-specific logic.
 
-### `npm start`
+### `components`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The components folder is further organized into subfolders, such as `ui` and `form` components, to keep the components organized and manageable. This prevents it from becoming overwhelming as the project grows.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### `hooks`
 
-### `npm test`
+Global `hooks` used across multiple pages are stored here, while page-specific hooks reside in the pages folder. This ensures that hooks are appropriately scoped and organized based on their usage.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `assets`
 
-### `npm run build`
+All non-code assets like images, CSS files, and fonts are stored here. This keeps the codebase clean and separates design-related assets from the functional code.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### `context`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+React context files used across multiple pages are stored here. This centralized location makes it easy to manage and access shared context data throughout the application.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `data`
 
-### `npm run eject`
+Similar to the assets folder, the data folder stores data-related assets like JSON files containing information used in the code. It can also contain files for global constant variables, providing a central location for managing application data.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### `utils`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The utils folder is for storing utility functions, such as formatters, that are used across the application. It's important to keep these functions pure to maintain predictability and ease of testing.
